@@ -1,0 +1,207 @@
+/* =====================================================
+   1. RESET / BASE
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--texto-fonte);
+    text-align: center;
+}
+
+
+/* =====================================================
+   2. VARIÁVEIS (Design Tokens)
+===================================================== */
+
+:root {
+    --cor-de-fundo: #afddfb;
+    --cor-azul: #1d80c1;
+    --cor-subtitulo: #1c81c0;
+    --cor-amarelo: #fff81b;
+    --cor-branco: #FFFFFF;
+    --cor-texto: #1d1d1d;
+
+    --texto-fonte: Tahoma, sans-serif;
+
+    --espaco-interno: 30px 0;
+}
+
+
+/* =====================================================
+   3. ESTRUTURA GLOBAL
+===================================================== */
+
+section {
+    padding: var(--espaco-interno);
+}
+
+section p {
+    margin: 10px auto;
+    text-align: justify;
+    max-width: 980px;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   4. MENU / TOPO
+===================================================== */
+
+#secao {
+    background-color: var(--cor-de-fundo);
+}
+
+#secao img {
+    width: 150px;
+}
+
+#secao nav {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 18px;
+    border-bottom: 2px solid var(--cor-texto);
+    margin: 0 10px;
+    display: inline-block;
+}
+
+
+/* =====================================================
+   5. BANNER
+===================================================== */
+
+#secao2 {
+    margin-top: 50px;
+    padding-top: 0;
+}
+
+
+/* =====================================================
+   6. SOBRE
+===================================================== */
+
+#secao3 h1 {
+    color: var(--cor-texto);
+    margin-bottom: 5px;
+}
+
+#secao3 .azul {
+    color: var(--cor-subtitulo);
+    margin-top: 0;
+    font-weight: normal;
+}
+
+#secao3 img {
+    width: 450px;
+}
+
+
+/* =====================================================
+   7. SERVIÇOS
+===================================================== */
+
+#secao4 {
+    background-color: var(--cor-azul);
+}
+
+#secao4 p {
+    color: var(--cor-branco);
+    line-height: 42px;
+    font-size: 22px;
+    text-align: center;
+    max-width: 700px;
+}
+
+.lista-servicos {
+    margin: 40px auto;
+    width: 135px;
+}
+
+.lista-servicos li {
+    color: var(--cor-branco);
+    line-height: 42px;
+    text-align: left;
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   8. CORRETORES
+===================================================== */
+
+#secao5 img {
+    width: 450px;
+}
+
+#secao5 .azul {
+    color: var(--cor-azul);
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   9. CONTATO
+===================================================== */
+
+#secao6 {
+    background-color: var(--cor-azul);
+}
+
+#secao6 p {
+    color: var(--cor-branco);
+    background-color: var(--cor-texto);
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.lista-contato {
+    margin: 40px auto;
+    width: 210px;
+}
+
+.lista-contato li {
+    margin-top: 15px;
+    font-size: 18px;
+    list-style: none;
+}
+
+.lista-contato a {
+    background-color: var(--cor-branco);
+    color: var(--cor-azul);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   10. UTILIDADES / CLASSES REUTILIZÁVEIS
+===================================================== */
+
+.negrito-azul {
+    color: var(--cor-azul);
+    font-weight: bold;
+}
+
+.negrito-amarelo {
+    color: var(--cor-amarelo);
+    font-weight: bold;
+}
+
+.branco {
+    color: var(--cor-branco);
+    font-size: 28px;
+    line-height: 42px;
+}

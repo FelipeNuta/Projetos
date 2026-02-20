@@ -1,0 +1,93 @@
+/*  Variáveis */
+:root {
+    --cor-primaria: #49B970;
+    --cor-primaria-hover: #3da864;
+    --cor-borda: #D5D5D5;
+    --cor-botao: #F5F5F5;
+}
+
+/*  Reset / base global */
+body {
+    font-family: Tahoma, sans-serif;
+}
+
+/*  Layout */
+section {
+    text-align: center;
+    padding: 50px;
+    border: 1px solid var(--cor-borda);
+}
+
+section p {
+    font-size: 16px;
+    max-width: 930px;
+    margin: 15px auto 30px;
+}
+
+/*  Componentes */
+.botao {
+    font-size: 14px;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/*  Modificadores */
+.botao--primario:hover, .botao--primario:focus {
+    background-color: var(--cor-primaria-hover);
+}
+
+.botao--primario {
+    color: var(--cor-botao);
+    background-color: var(--cor-primaria);
+    
+}
+
+.texto-destaque {
+    font-weight: bold;
+}
+
+/*  Regras específicas */
+section img {
+    max-width: 190px;
+    width: 100%;
+}
+
+section h1 {
+    font-size: 32px;
+}
+
+section h2 {
+    font-size: 24px;
+}
+
+section h3 {
+    font-size: 18px;
+}
+
+/*  Responsividade */
+@media (max-width: 768px) {
+
+    section {
+        padding: 30px 20px;
+    }
+
+    section p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    #secao1 img,
+    #secao3 img {
+        max-width: 150px;
+    }
+
+}
+
+
+
+
+

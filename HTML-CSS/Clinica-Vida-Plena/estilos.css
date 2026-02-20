@@ -1,0 +1,165 @@
+/* =====================================================
+   1. RESET / BASE
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+}
+
+
+/* =====================================================
+   2. VARIÁVEIS (Design Tokens)
+===================================================== */
+
+:root {
+   --cor-verde: #20C997;
+   --cor-azul: #2C7BE5;
+   --cor-texto: #212529;
+   --cor-fundo: #F8F9FA;
+}
+
+/* =====================================================
+   3. ESTRUTURA GLOBAL
+===================================================== */
+
+nav a:hover {
+    color: white;
+}
+
+nav {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+/* =====================================================
+    4. BANNER
+===================================================== */
+
+#banner img {
+    margin-top: 50px;
+    padding-top: 0;
+    max-width: 700px;
+    border-radius: 20px;
+}
+
+/* =====================================================
+   5. MENU / TOPO
+===================================================== */
+
+header, footer {
+    background-color: var(--cor-verde);
+    padding: 30px 0;
+    margin-top: 0;
+}
+
+h1 {
+    padding: 20px 0;
+}
+
+header img {
+    max-width: 150px;
+    border-radius: 20px;
+}
+
+nav a {
+    font-size: 18px;
+    color: var(--cor-texto);
+    border-bottom: 2px solid var(--cor-texto);
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* =====================================================
+   6. HOME
+===================================================== */
+
+h2 {
+    margin: 20px 0;
+}
+
+#home img, #sobre-nos img {
+    max-width: 450px;
+    border-radius: 20px;
+}
+
+/* =====================================================
+   7. SERVIÇOS
+===================================================== */
+
+#services, #contact {
+    background-color: var(--cor-verde);
+}
+
+#services li {
+    text-align: left;
+    margin: 10px auto;
+    width: 135px;
+}
+
+/* =====================================================
+   8. CONTATO
+===================================================== */
+
+#contact a {
+    font-size: 18px;
+    margin: 2px 10px;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+iframe {
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* =====================================================
+   9. UTILIDADES / CLASSES REUTILIZÁVEIS
+===================================================== */
+
+.negrito-azul {
+    color: var(--cor-azul);
+}
+
+.section-center {
+    text-align: center;
+    margin: 5px auto;
+    max-width: 980px;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+.section-text {
+    margin: 30px auto;
+    text-align: justify;
+    max-width: 980px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* =====================================================
+   10. RESPONSIVIDADE
+   Media Queries sempre no final
+===================================================== */
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
+
