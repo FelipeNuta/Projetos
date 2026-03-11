@@ -1,0 +1,127 @@
+[INICIO]
+
+   |
+   v
+
+[Cliente faz requisição HTTP]
+GET /fato?ano=XXXX
+
+   |
+   v
+
+[index.js recebe a requisição]
+
+   |
+   v
+
+[Extrair parâmetro "ano" de req.query]
+
+   |
+   v
+
+[Validação do parâmetro ano]
+
+   |
+   +---- O ano foi informado?
+   |         |
+   |         NÃO
+   |         |
+   |         v
+   |   [Retornar erro 400]
+   |   "Ano não informado"
+   |
+   |         SIM
+   v
+
+[Validar formato do ano]
+
+   |
+   +---- Possui exatamente 4 dígitos?
+   |         |
+   |         NÃO
+   |         |
+   |         v
+   |   [Retornar erro 400]
+   |   "Ano deve conter 4 dígitos"
+   |
+   |         SIM
+   v
+
+[Validar se contém apenas números]
+
+   |
+   +---- Contém letras ou caracteres especiais?
+   |         |
+   |         SIM
+   |         |
+   |         v
+   |   [Retornar erro 400]
+   |   "Ano inválido"
+   |
+   |         NÃO
+   v
+
+[Converter ano para número]
+
+   |
+   v
+
+[Validar intervalo do ano]
+
+   |
+   +---- Ano está entre 1920 e 2020?
+   |         |
+   |         NÃO
+   |         |
+   |         v
+   |   [Retornar erro 400]
+   |   "Ano fora do intervalo permitido"
+   |
+   |         SIM
+   v
+
+[Chamar função no service.js]
+
+   |
+   v
+
+service.js → buscarFatoPorAno(ano)
+
+   |
+   v
+
+[Consultar lista em dados.js]
+
+   |
+   v
+
+dados.js → listaDeFatos
+
+   |
+   v
+
+[Encontrar fato correspondente ao ano]
+
+   |
+   +---- Fato encontrado?
+   |         |
+   |         NÃO
+   |         |
+   |         v
+   |   [Retornar erro 404]
+   |   "Fato não encontrado"
+   |
+   |         SIM
+   v
+
+[Retornar fato histórico]
+
+{
+  "ano": XXXX,
+  "fato": "Descrição do evento"
+}
+
+   |
+   v
+
+[FIM]
